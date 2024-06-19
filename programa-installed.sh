@@ -27,10 +27,7 @@ fi
 		1)Deseja Instalar o Programa?
 		2)Deseja remover o programa?
 		3)Deseja Sair?	 
-		
-
-	
-             \033[m"
+		\033[m"
 
 	echo -e "\033[37;1mEscolha Sua Opcao:\033[m " 
 	read opc
