@@ -14,10 +14,10 @@ pc="$1"
 # limpar a tela:
 clear
 
-# chamar o programa:
-which "$pc" &>/dev/null
+# chamar o programa e ja testa:
 
-if [ $? -eq 0 ];then
+
+if which "$pc" &>/dev/nul;then
 	echo -e "\033[33;1mPrograma Instalado.\033[m"
 else
 	echo -e "\033[31;1mPrograma Não Instalado.\033[m"
