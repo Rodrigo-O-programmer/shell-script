@@ -6,9 +6,25 @@
 # tbm faz uma verificação se há internet, caso não tenha internet o programa fecha. 
 
 
-# ver se um programa esta instalado no systema:
+# Verifica se o sistema op é um Debian e sai caso não for.s
+if [ -f /etc/os-release ]; then
+    # Obtém a informação da distribuição a partir do arquivo /etc/os-release
+    source /etc/os-release
+    echo "Distribuição: $NAME"
+    echo "Versão: $VERSION"
+else
+    # Outras verificações podem ser adicionadas aqui dependendo do caso
+    echo "Não foi possível determinar a distribuição."
+	# fazer uma comparação de strings se for debian tudo bem caso não for debian saia.
+fi
 
- var
+if [ "$NAME" = "$NAME" ]; then
+    echo "Usa debian."
+else
+    echo -e "\033[31;1mNão Usa Debian. Este Script Deve Rodar em  Debian 12. Saindo Em 3 Segundos.\033[m" && sleep 3s && exit 1
+fi
+# vesr se um programa esta instalado no systema:
+ vars
 pc="$1"
 
 # limpar a tela:
